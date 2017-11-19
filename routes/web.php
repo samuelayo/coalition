@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TestController@index');
+Route::get('/edit/{id}', 'TestController@showedit');
+Route::post('/edit/{id}', 'TestController@saveedit');
+Route::post('/', 'TestController@saveitem');
